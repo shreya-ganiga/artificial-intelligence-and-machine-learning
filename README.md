@@ -144,19 +144,6 @@ datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br><br>
 print(type(datetime_object))<br>
 print(datetime_object)<br>
 **output**<br>
-from datetime import datetime<br>
-my_date_string = "Mar 11 2011 11:31AM"<br>
-datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br>
-print(type(datetime_object))<br>
-print(datetime_object)<br>
-from datetime import datetime<br>
-​
-my_date_string = "Mar 11 2011 11:31AM"<br>
-​
-datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br>
-​
-print(type(datetime_object))<br>
-print(datetime_object)<br>
 <class 'datetime.datetime'><br>
 2011-03-11 11:31:00<br>
 
