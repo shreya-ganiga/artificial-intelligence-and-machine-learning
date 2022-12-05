@@ -100,69 +100,63 @@ def compute_lcm(x, y):<br>
 num1 = 54<br>
 num2 = 24<br>
 print("The L.C.M. is", compute_lcm(num1, num2))<br>
-**output**
-The L.C.M. is 216
-**Program to add two matrices using nested loop**
-# Program to add two matrices using nested loop
-X = [[12,7,3],
-    [4 ,5,6],
-    [7 ,8,9]]
-Y = [[5,8,1],
-    [6,7,3],
-    [4,5,9]]
-result = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
-# iterate through rows
-for i in range(len(X)):
-   # iterate through columns
-   for j in range(len(X[0])):
-       result[i][j] = X[i][j] + Y[i][j]
-for r in result:
-   print(r)
-   **output**
-   [17, 15, 4]
-[10, 12, 9]
-[11, 13, 18]
-**program to sort dictionaries**
-dt = {5:4, 1:6, 6:3}
-sorted_dt = {key: value for key, value in sorted(dt.items(), key=lambda item: item[1])}
-print(sorted_dt)
-**output**
-{6: 3, 5: 4, 1: 6}
-or
-dt = {5:4, 1:6, 6:3}
+**output**<br>
+The L.C.M. is 216<br>
+**Program to add two matrices using nested loop**<br>
+# Program to add two matrices using nested loop<br>
+X = [[12,7,3],<br>
+    [4 ,5,6],<br>
+    [7 ,8,9]]<br>
+Y = [[5,8,1],<br>
+    [6,7,3],<br>
+    [4,5,9]]<br>
+result = [[0,0,0],<br>
+         [0,0,0],<br>
+         [0,0,0]]<br>
+# iterate through rows<br>
+for i in range(len(X)):<br>
+   # iterate through columns<br>
+   for j in range(len(X[0])):<br>
+       result[i][j] = X[i][j] + Y[i][j]<br>
+for r in result:<br>
+   print(r)<br>
+   **output**<br>
+   [17, 15, 4]<br>
+[10, 12, 9]<br>
+[11, 13, 18]<br>
+**program to sort dictionaries**<br>
+dt = {5:4, 1:6, 6:3}<br>
+sorted_dt = {key: value for key, value in sorted(dt.items(), key=lambda item: item[1])}<br>
+print(sorted_dt)<br>
+**output**<br>
+{6: 3, 5: 4, 1: 6}<br>
+or<br>
+dt = {5:4, 1:6, 6:3}<br>
 
-sorted_dt_value = sorted(dt.values())
-print(sorted_dt_value)
-**output**
-[3, 4, 6]
-**program to convert string to date and time**
-from datetime import datetime
-
-my_date_string = "Mar 11 2011 11:31AM"
-
-datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')
-
-print(type(datetime_object))
-print(datetime_object)
-**output**
-from datetime import datetime
-
-my_date_string = "Mar 11 2011 11:31AM"
-
-datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')
-
-print(type(datetime_object))
-print(datetime_object)
-from datetime import datetime
+sorted_dt_value = sorted(dt.values())<br>
+print(sorted_dt_value)<br>
+**output**<br>
+[3, 4, 6]<br>
+**program to convert string to date and time**<br>
+from datetime import datetime<br>
+my_date_string = "Mar 11 2011 11:31AM"<br>
+datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br><br>
+print(type(datetime_object))<br>
+print(datetime_object)<br>
+**output**<br>
+from datetime import datetime<br>
+my_date_string = "Mar 11 2011 11:31AM"<br>
+datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br>
+print(type(datetime_object))<br>
+print(datetime_object)<br>
+from datetime import datetime<br>
 ​
-my_date_string = "Mar 11 2011 11:31AM"
+my_date_string = "Mar 11 2011 11:31AM"<br>
 ​
-datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')
+datetime_object = datetime.strptime(my_date_string, '%b %d %Y %I:%M%p')<br>
 ​
-print(type(datetime_object))
-print(datetime_object)
-<class 'datetime.datetime'>
-2011-03-11 11:31:00
+print(type(datetime_object))<br>
+print(datetime_object)<br>
+<class 'datetime.datetime'><br>
+2011-03-11 11:31:00<br>
 
