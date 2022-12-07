@@ -155,4 +155,35 @@ while(n>0):<br>
     rev=rev*10+dig<br>
     n=n//10<br>
 print("Reverse of the number:",rev)<br>
+**output**<br>
+Enter number: 43761<br>
+Reverse of the number: 16734<br>
+**python program to  compute power of a number**<br>
+base = 3<br>
+exponent = 4<br>
+result = 1<br>
+for exponent in range(exponent, 0, -1):<br>
+    result *= base<br>
+print("Answer = " + str(result))<br>
+**output**<br>
+Answer = 81<br>
+**python program to create count down timer**<br>
+import time<br>
+def countdown(time_sec):<br>
+    while time_sec:<br>
+        mins, secs = divmod(time_sec, 60)<br>
+        timeformat = '{:02d}:{:02d}'.format(mins, secs)<br>
+        print(timeformat, end='\r')<br>
+        time.sleep(1)<br>
+        time_sec -= 1<br>
+    print("stop")<br>
+countdown(60)<br>
+**output**<br>
+stop1<br>
+**python program to convert byte to a string**<br>
+print(b'Easy \xE2\x9C\x85'.decode("utf-8"))<br>
+**output**<br>
+Easy ✅<br>
+
+
 
