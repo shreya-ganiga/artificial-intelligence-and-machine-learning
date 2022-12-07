@@ -146,4 +146,13 @@ print(datetime_object)<br>
 **output**<br>
 <class 'datetime.datetime'><br>
 2011-03-11 11:31:00<br>
+**python program to reverse a numer**<br>
+ 
+n=int(input("Enter number: "))<br>
+rev=0<br>
+while(n>0):<br>
+    dig=n%10<br>
+    rev=rev*10+dig<br>
+    n=n//10<br>
+print("Reverse of the number:",rev)<br>
 
