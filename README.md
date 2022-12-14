@@ -214,6 +214,8 @@ print("Following is the Breadth-First Search")
 
 bfs(visited, graph, '1')  
 **output**
+Following is the Breadth-First Search
+1 2 10 3 8 4 9 5 6 7 
 
 
 
