@@ -356,6 +356,361 @@ Enter the Target/Destination Node: 1 <br>
 
 Path: 2  <br>
 
+**tic tac toe** <br>
+import random <br>
+
+
+class TicTacToe: <br>
+
+    def __init__(self): <br>
+        self.board = [] <br>
+
+    def create_board(self): <br>
+        for i in range(3): <br>
+            row = [] <br>
+            for j in range(3): <br>
+                row.append('-') <br>
+            self.board.append(row) <br>
+
+    def get_random_first_player(self): <br>
+        return random.randint(0, 1) <br>
+
+    def fix_spot(self, row, col, player): <br>
+        self.board[row][col] = player <br>
+
+    def is_player_win(self, player): <br>
+        win = None <br>
+
+        n = len(self.board) <br>
+ 
+        # checking rows <br>
+        for i in range(n): <br>
+            win = True <br>
+            for j in range(n): <br>
+                if self.board[i][j] != player: <br>
+                    win = False <br>
+                    break <br>
+            if win: <br>
+                return win <br>
+
+        # checking columns <br>
+        for i in range(n): <br>
+            win = True <br>
+            for j in range(n): <br>
+                if self.board[j][i] != player: <br>
+                    win = False <br>
+                    break <br>
+            if win: <br>
+                return win <br>
+
+        # checking diagonals <br>
+        win = True <br>
+        for i in range(n): <br>
+            if self.board[i][i] != player: <br>
+                win = False <br>
+                break <br>
+        if win: <br>
+            return win <br>
+
+        win = True <br>
+        for i in range(n): <br>
+            if self.board[i][n - 1 - i] != player: <br>
+                win = False <br>
+                break <br>
+        if win: <br>
+            return win <br>
+        return False <br>
+
+        for row in self.board: <br>
+            for item in row: <br>
+                if item == '-': <br>
+                    return False <br>
+        return True <br>
+
+    def is_board_filled(self): <br>
+        for row in self.board: <br>
+            for item in row: <br>
+                if item == '-': <br>
+                    return False <br>
+        return True <br>
+
+    def swap_player_turn(self, player): <br>
+        return 'X' if player == 'O' else 'O' <br>
+
+    def show_board(self): <br>
+        for row in self.board: <br>
+            for item in row: <br>
+                print(item, end=" ") <br>
+            print() <br>
+
+    def start(self): <br>
+        self.create_board() <br>
+
+        player = 'X' if self.get_random_first_player() == 1 else 'O' <br>
+        while True: <br>
+            print(f"Player {player} turn") <br>
+
+            self.show_board() <br>
+
+            # taking user input <br>
+            row, col = list( <br>
+                map(int, input("Enter row and column numbers to fix spot: ").split())) <br>
+            print() <br>
+
+            # fixing the spot <br>
+            self.fix_spot(row - 1, col - 1, player) <br>
+
+            # checking whether current player is won or not <br>
+            if self.is_player_win(player): <br>
+                print(f"Player {player} wins the game!") <br>
+                break <br>
+
+            # checking whether the game is draw or not <br>
+            if self.is_board_filled(): <br>
+                print("Match Draw!") <br>
+                break
+
+            # swapping the turn <br>
+            player = self.swap_player_turn(player) <br>
+
+        # showing the final view of board <br>
+        print() <br>
+        self.show_board() <br>
+
+
+# starting the game <br>
+tic_tac_toe = TicTacToe() <br>
+tic_tac_toe.start() <br>
+
+**output** <br>
+Player X turn <br>
+- - -  <br>
+- - -  <br>
+- - -  <br>
+Enter row and column numbers to fix spot: 1 1 <br>
+
+Player O turn <br>
+X - -  <br>
+- - -  < br>
+- - -  <br>
+Enter row and column numbers to fix spot: 2 1 <br>
+
+Player X turn <br>
+X - -  <br>
+O - -  <br>
+- - -  <br>
+Enter row and column numbers to fix spot: 1 2 <br>
+
+Player O turn <br>
+X X -  <br>
+O - -  <br>
+- - -  <br>
+Enter row and column numbers to fix spot: 1 3 <br>
+
+Player X turn <br>
+X X O  <br>
+O - -  <br>
+- - -  <br>
+Enter row and column numbers to fix spot: 2 2 <br>
+
+Player O turn <br>
+X X O  <br>
+O X -  <br>
+- - -  <br>
+Enter row and column numbers to fix spot: 3 2 <br>
+
+Player X turn <br>
+X X O  <br>
+O X -  <br>
+- O - 
+- O - 
+
+Enter row and column numbers to fix spot: 3 3 <br>
+
+- O - 
+Player X wins the game!
+
+X X O 
+O X - 
+- O X 
+
+**another tictac**
+# Tic-Tac-Toe Program using
+# random number in Python
+ 
+# importing all necessary libraries
+import numpy as np
+import random
+from time import sleep
+ 
+# Creates an empty board
+ 
+ 
+def create_board():
+    return(np.array([[0, 0, 0],
+                     [0, 0, 0],
+                     [0, 0, 0]]))
+ 
+# Check for empty places on board
+ 
+ 
+def possibilities(board):
+    l = []
+ 
+    for i in range(len(board)):
+        for j in range(len(board)):
+ 
+            if board[i][j] == 0:
+                l.append((i, j))
+    return(l)
+ 
+# Select a random place for the player
+ 
+ 
+def random_place(board, player):
+    selection = possibilities(board)
+    current_loc = random.choice(selection)
+    board[current_loc] = player
+    return(board)
+ 
+# Checks whether the player has three
+# of their marks in a horizontal row
+ 
+ 
+def row_win(board, player):
+    for x in range(len(board)):
+        win = True
+ 
+        for y in range(len(board)):
+            if board[x, y] != player:
+                win = False
+                continue
+ 
+        if win == True:
+            return(win)
+    return(win)
+ 
+# Checks whether the player has three
+# of their marks in a vertical row
+ 
+ 
+def col_win(board, player):
+    for x in range(len(board)):
+        win = True
+ 
+        for y in range(len(board)):
+            if board[y][x] != player:
+                win = False
+                continue
+ 
+        if win == True:
+            return(win)
+    return(win)
+ 
+# Checks whether the player has three
+# of their marks in a diagonal row
+ 
+ 
+def diag_win(board, player):
+    win = True
+    y = 0
+    for x in range(len(board)):
+        if board[x, x] != player:
+            win = False
+    if win:
+        return win
+    win = True
+    if win:
+        for x in range(len(board)):
+            y = len(board) - 1 - x
+            if board[x, y] != player:
+                win = False
+    return win
+ 
+# Evaluates whether there is
+# a winner or a tie
+ 
+ 
+def evaluate(board):
+    winner = 0
+ 
+    for player in [1, 2]:
+        if (row_win(board, player) or
+                col_win(board, player) or
+                diag_win(board, player)):
+ 
+            winner = player
+ 
+    if np.all(board != 0) and winner == 0:
+        winner = -1
+    return winner
+ 
+# Main function to start the game
+ 
+ 
+def play_game():
+    board, winner, counter = create_board(), 0, 1
+    print(board)
+    sleep(2)
+ 
+    while winner == 0:
+        for player in [1, 2]:
+            board = random_place(board, player)
+            print("Board after " + str(counter) + " move")
+            print(board)
+            sleep(2)
+            counter += 1
+            winner = evaluate(board)
+            if winner != 0:
+                break
+    return(winner)
+ 
+ 
+# Driver Code
+print("Winner is: " + str(play_game()))
+**output**
+
+[[0 0 0]
+ [0 0 0]
+ [0 0 0]]
+Board after 1 move
+[[0 0 0]
+ [0 0 0]
+ [0 0 1]]
+Board after 2 move
+[[0 0 0]
+ [0 2 0]
+ [0 0 1]]
+Board after 3 move
+[[0 0 0]
+ [1 2 0]
+ [0 0 1]]
+Board after 4 move
+[[0 0 2]
+ [1 2 0]
+ [0 0 1]]
+Board after 5 move
+[[0 0 2]
+ [1 2 0]
+ [1 0 1]]
+Board after 6 move
+[[0 0 2]
+ [1 2 0]
+ [1 2 1]]
+Board after 7 move
+[[0 1 2]
+ [1 2 0]
+ [1 2 1]]
+Board after 8 move
+[[2 1 2]
+ [1 2 0]
+ [1 2 1]]
+Board after 9 move
+[[2 1 2]
+ [1 2 1]
+ [1 2 1]]
+Winner is: -1
+
 
 
 
