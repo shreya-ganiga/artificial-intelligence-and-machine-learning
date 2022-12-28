@@ -669,46 +669,46 @@ def play_game():<br>
 print("Winner is: " + str(play_game()))<br>
 **output**<br>
 
-[[0 0 0]
- [0 0 0]
- [0 0 0]]
-Board after 1 move
-[[0 0 0]
- [0 0 0]
- [0 0 1]]
-Board after 2 move
-[[0 0 0]
- [0 2 0]
- [0 0 1]]
-Board after 3 move
-[[0 0 0]
- [1 2 0]
- [0 0 1]]
-Board after 4 move
-[[0 0 2]
- [1 2 0]
- [0 0 1]]
-Board after 5 move
-[[0 0 2]
- [1 2 0]
- [1 0 1]]
-Board after 6 move
-[[0 0 2]
- [1 2 0]
- [1 2 1]]
-Board after 7 move
-[[0 1 2]
- [1 2 0]
- [1 2 1]]
-Board after 8 move
-[[2 1 2]
- [1 2 0]
- [1 2 1]]
-Board after 9 move
-[[2 1 2]
- [1 2 1]
- [1 2 1]]
-Winner is: -1
+[[0 0 0]<br>
+ [0 0 0]<br>
+ [0 0 0]]<br>
+Board after 1 move<br>
+[[0 0 0]<br>
+ [0 0 0]<br>
+ [0 0 1]]<br>
+Board after 2 move<br>
+[[0 0 0]<br>
+ [0 2 0]<br>
+ [0 0 1]]<br>
+Board after 3 move<br>
+[[0 0 0]<br>
+ [1 2 0]<br>
+ [0 0 1]]<br>
+Board after 4 move<br>
+[[0 0 2]<br>
+ [1 2 0]<br>
+ [0 0 1]]<br>
+Board after 5 move<br>
+[[0 0 2]<br>
+ [1 2 0]<br>
+ [1 0 1]]<br>
+Board after 6 move<br>
+[[0 0 2]<br>
+ [1 2 0]<br>
+ [1 2 1]]<br>
+Board after 7 move<br>
+[[0 1 2]<br>
+ [1 2 0]<br>
+ [1 2 1]]<br>
+Board after 8 move<br>
+[[2 1 2]<br>
+ [1 2 0]<br>
+ [1 2 1]]<br>
+Board after 9 move<br>
+[[2 1 2]<br>
+ [1 2 1]<br>
+ [1 2 1]]<br>
+Winner is: -1<br>
 
 
 
